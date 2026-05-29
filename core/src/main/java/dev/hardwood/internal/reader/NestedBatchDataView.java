@@ -87,7 +87,7 @@ public final class NestedBatchDataView {
     /// have been pre-computed by the drain thread.
     public void setBatchData(NestedBatch[] batches, ColumnSchema[] columnSchemas, String fileName) {
         this.batchIndex = NestedBatchIndex.buildFromBatches(
-                batches, columnSchemas, schema, projectedSchema, fieldMap);
+                batches, columnSchemas, schema, projectedSchema, fieldMap, fileName);
         this.currentFileName = fileName;
         cacheFieldArrays();
     }
